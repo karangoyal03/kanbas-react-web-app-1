@@ -73,7 +73,11 @@ export default function Lab1() {
         </ul>
         Your favorite books (in no particular order)
         <ul id="wd-your-books">
-          {/* complete on your own */}
+          <li>The Catcher in the Rye</li>
+          <li>To Kill a Mockingbird</li>
+          <li>1984</li>
+          <li>Pride and Prejudice</li>
+          <li>The Great Gatsby</li>
         </ul>
       </div>
       <div id="wd-tables">
@@ -105,6 +109,48 @@ export default function Lab1() {
               <td>JavaScript</td>
               <td>2/17/21</td>
               <td>95</td>
+            </tr>
+            <tr>
+              <td>Q4</td>
+              <td>React</td>
+              <td>2/24/21</td>
+              <td>88</td>
+            </tr>
+            <tr>
+              <td>Q5</td>
+              <td>Node.js</td>
+              <td>3/3/21</td>
+              <td>92</td>
+            </tr>
+            <tr>
+              <td>Q6</td>
+              <td>Express</td>
+              <td>3/10/21</td>
+              <td>87</td>
+            </tr>
+            <tr>
+              <td>Q7</td>
+              <td>MongoDB</td>
+              <td>3/17/21</td>
+              <td>93</td>
+            </tr>
+            <tr>
+              <td>Q8</td>
+              <td>GraphQL</td>
+              <td>3/24/21</td>
+              <td>89</td>
+            </tr>
+            <tr>
+              <td>Q9</td>
+              <td>TypeScript</td>
+              <td>3/31/21</td>
+              <td>91</td>
+            </tr>
+            <tr>
+              <td>Q10</td>
+              <td>Web Security</td>
+              <td>4/7/21</td>
+              <td>94</td>
             </tr>
           </tbody>
           <tfoot>
@@ -142,9 +188,6 @@ export default function Lab1() {
     <label htmlFor="wd-text-fields-last-name">Last name:</label>
     <input type="text" id="wd-text-fields-last-name" placeholder="Doe"
       value="Wonderland" title="The last name" />
-    {/* copy rest of form elements here  */}
-  </form>
-</div>
 <h5>Text boxes</h5>
 <label>Biography:</label><br/>
 <textarea id="wd-textarea" cols={30} rows={10}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</textarea>
@@ -232,7 +275,8 @@ export default function Lab1() {
 Please
 <a id="wd-lipsum" href="https://www.lipsum.com">click here</a>
 to get dummy text<br/>
-
+</form>
+</div>
 
     </div>
   );
