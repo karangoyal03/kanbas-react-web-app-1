@@ -1,95 +1,154 @@
-import React from "react";
-
 export default function Dashboard() {
   return (
     <div id="wd-dashboard">
-      <h1 id="wd-dashboard-title">Dashboard</h1>
-      <hr />
-      <h2 id="wd-dashboard-published">Published Courses (7)</h2>
-      <hr />
-      <div id="wd-dashboard-courses">
-        <div className="wd-dashboard-course">
-          <img src="/images/reactjs.png" width={200} alt="React JS" />
-          <div>
-            <a className="wd-dashboard-course-link" href="#/Kanbas/Courses/1234/Home">
-              CS1234 React JS
-            </a>
-            <p className="wd-dashboard-course-title">
-              Full Stack software developer
-            </p>
-            <a href="#/Kanbas/Courses/1234/Home"> Go </a>
+      <h1 id="wd-dashboard-title">Dashboard</h1> <hr />
+      <h2 id="wd-dashboard-published">Published Courses (12)</h2> <hr />
+      <div id="wd-dashboard-courses" className="row">
+        <div className="row row-cols-1 row-cols-md-5 g-4">
+          <div className="wd-dashboard-course col" style={{ width: "300px" }}>
+            <div className="card">
+              <img src="/images/reactjs.png" alt="React JS" style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
+              <div className="card-body">
+                <a
+                  className="wd-dashboard-course-link"
+                  href="#/Kanbas/Courses/1234/Home"
+                  style={{ textDecoration: "none", color: "navy", fontWeight: "bold" }}
+                >
+                  CS1234 React JS
+                </a>
+                <p className="wd-dashboard-course-title">
+                  Full Stack software developer
+                </p>
+                <a href="#/Kanbas/Courses/1234/Home"> Go </a>
+              </div>
+            </div>
           </div>
-        </div>
-        <div className="wd-dashboard-course">
-          <img src="/images/nodejs.png" width={200} alt="Node JS" />
-          <div>
-            <a className="wd-dashboard-course-link" href="#/Kanbas/Courses/2345/Home">
-              CS2345 Node JS
-            </a>
-            <p className="wd-dashboard-course-title">
-              Backend development with Node.js
-            </p>
-            <a href="#/Kanbas/Courses/2345/Home"> Go </a>
+ 
+          <div className="wd-dashboard-course col" style={{ width: "300px" }}>
+            <div className="card">
+              <img src="/images/nodejs.png" alt="Node JS" style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
+              <div className="card-body">
+                <a
+                  className="wd-dashboard-course-link"
+                  href="#/Kanbas/Courses/1234/Home"
+                  style={{ textDecoration: "none", color: "navy", fontWeight: "bold" }}
+                >
+                  CS5679 Node JS
+                </a>
+                <p className="wd-dashboard-course-title">
+                Backend Development with Node.js
+                </p>
+                <a href="#/Kanbas/Courses/1234/Home"> Go </a>
+              </div>
+            </div>
           </div>
-        </div>
-        <div className="wd-dashboard-course">
-          <img src="/images/htmlcss.png" width={200} alt="HTML and CSS" />
-          <div>
-            <a className="wd-dashboard-course-link" href="#/Kanbas/Courses/3456/Home">
-              CS3456 HTML and CSS
-            </a>
-            <p className="wd-dashboard-course-title">
-              Web development with HTML and CSS
-            </p>
-            <a href="#/Kanbas/Courses/3456/Home"> Go </a>
+          <div className="wd-dashboard-course col" style={{ width: "300px" }}>
+            <div className="card">
+              <img src="/images/htmlcss.png" alt="HtmlCSS" style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
+              <div className="card-body">
+                <a
+                  className="wd-dashboard-course-link"
+                  href="#/Kanbas/Courses/1234/Home"
+                  style={{ textDecoration: "none", color: "navy", fontWeight: "bold" }}
+                >
+                  CS5680 HtmlCSS
+                </a>
+                <p className="wd-dashboard-course-title">
+                Full Stack Web Development
+                </p>
+                <a href="#/Kanbas/Courses/1234/Home"> Go </a>
+              </div>
+            </div>
           </div>
-        </div>
-        <div className="wd-dashboard-course">
-          <img src="/images/javascript.png" width={200} alt="JavaScript" />
-          <div>
-            <a className="wd-dashboard-course-link" href="#/Kanbas/Courses/4567/Home">
-              CS4567 JavaScript
-            </a>
-            <p className="wd-dashboard-course-title">
-              Advanced JavaScript programming
-            </p>
-            <a href="#/Kanbas/Courses/4567/Home"> Go </a>
+          <div className="wd-dashboard-course col" style={{ width: "300px" }}>
+            <div className="card">
+              <img src="/images/database.jpeg" alt="Database" style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
+              <div className="card-body">
+                <a
+                  className="wd-dashboard-course-link"
+                  href="#/Kanbas/Courses/1234/Home"
+                  style={{ textDecoration: "none", color: "navy", fontWeight: "bold" }}
+                >
+                  CS5681 Database
+                </a>
+                <p className="wd-dashboard-course-title">
+                Database Applications
+                </p>
+                <a href="#/Kanbas/Courses/1234/Home"> Go </a>
+              </div>
+            </div>
           </div>
-        </div>
-        <div className="wd-dashboard-course">
-          <img src="/images/python.png" width={200} alt="Python" />
-          <div>
-            <a className="wd-dashboard-course-link" href="#/Kanbas/Courses/5678/Home">
-              CS5678 Python
-            </a>
-            <p className="wd-dashboard-course-title">
-              Data Science with Python
-            </p>
-            <a href="#/Kanbas/Courses/5678/Home"> Go </a>
+          <div className="wd-dashboard-course col" style={{ width: "300px" }}>
+            <div className="card">
+              <img src="/images/javascript.png" alt="Javascript" style={{ width: '100%', height: '200px', objectFit: 'cover' }}/>
+              <div className="card-body">
+                <a
+                  className="wd-dashboard-course-link"
+                  href="#/Kanbas/Courses/1234/Home"
+                  style={{ textDecoration: "none", color: "navy", fontWeight: "bold" }}
+                >
+                  CS5682 Javascript
+                </a>
+                <p className="wd-dashboard-course-title">
+                Web Development 
+                </p>
+                <a href="#/Kanbas/Courses/1234/Home"> Go </a>
+              </div>
+            </div>
           </div>
-        </div>
-        <div className="wd-dashboard-course">
-          <img src="/images/machinelearning.jpg" width={200} alt="Machine Learning" />
-          <div>
-            <a className="wd-dashboard-course-link" href="#/Kanbas/Courses/6789/Home">
-              CS6789 Machine Learning
-            </a>
-            <p className="wd-dashboard-course-title">
-              Introduction to Machine Learning
-            </p>
-            <a href="#/Kanbas/Courses/6789/Home"> Go </a>
+          <div className="wd-dashboard-course col" style={{ width: "300px" }}>
+            <div className="card">
+              <img src="/images/python.png" alt="Python" style={{ width: '100%', height: '200px', objectFit: 'cover' }}/>
+              <div className="card-body">
+                <a
+                  className="wd-dashboard-course-link"
+                  href="#/Kanbas/Courses/1234/Home"
+                  style={{ textDecoration: "none", color: "navy", fontWeight: "bold" }}
+                >
+                  CS5683 Python
+                </a>
+                <p className="wd-dashboard-course-title">
+                Enterprise Applications
+                </p>
+                <a href="#/Kanbas/Courses/1234/Home"> Go </a>
+              </div>
+            </div>
           </div>
-        </div>
-        <div className="wd-dashboard-course">
-          <img src="/images/database.jpeg" width={200} alt="Database Systems" />
-          <div>
-            <a className="wd-dashboard-course-link" href="#/Kanbas/Courses/7890/Home">
-              CS7890 Database Systems
-            </a>
-            <p className="wd-dashboard-course-title">
-              Principles of Database Systems
-            </p>
-            <a href="#/Kanbas/Courses/7890/Home"> Go </a>
+          <div className="wd-dashboard-course col" style={{ width: "300px" }}>
+            <div className="card">
+              <img src="images/machinelearning.jpg" alt="MachineLearning" style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
+              <div className="card-body">
+                <a
+                  className="wd-dashboard-course-link"
+                  href="#/Kanbas/Courses/1234/Home"
+                  style={{ textDecoration: "none", color: "navy", fontWeight: "bold" }}
+                >
+                  CS5684 MachineLearning
+                </a>
+                <p className="wd-dashboard-course-title">
+                Microservices with Flask
+                </p>
+                <a href="#/Kanbas/Courses/1234/Home"> Go </a>
+              </div>
+            </div>
+          </div>
+          <div className="wd-dashboard-course col" style={{ width: "300px" }}>
+            <div className="card">
+              <img src="/images/reactjs.png" alt="React JS" style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
+              <div className="card-body">
+                <a
+                  className="wd-dashboard-course-link"
+                  href="#/Kanbas/Courses/1234/Home"
+                  style={{ textDecoration: "none", color: "navy", fontWeight: "bold" }}
+                >
+                  CS5685 React JS
+                </a>
+                <p className="wd-dashboard-course-title">
+                Building Web Apps 
+                </p>
+                <a href="#/Kanbas/Courses/1234/Home"> Go </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
