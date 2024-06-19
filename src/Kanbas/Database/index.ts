@@ -1,5 +1,10 @@
-import courses from './courses.json';
+import courses from "./courses.json";
 import modules from "./modules.json";
 import assignments from "./assignments.json";
-const db = { courses,modules,assignments };
-export default db;
+import users from "./users.json";
+import enrollments from "./enrollments.json";
+import grades from "./grades.json";
+
+export default {
+  courses, modules, assignments, users, enrollments, grades
+};
