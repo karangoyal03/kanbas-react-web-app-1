@@ -1,9 +1,8 @@
 import { createSlice, nanoid } from "@reduxjs/toolkit";
 import db from "../../Database";
 import { title } from "process";
-
 const initialState = {
-  assignments: db.assignments || [],
+  assignments: db.assignments,
 };
 
 const assignmentSlice = createSlice({
