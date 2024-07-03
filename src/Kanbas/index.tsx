@@ -1,15 +1,12 @@
+// Kanbas.tsx
 import React, { useState } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import Dashboard from './Dashboard';
 import Courses from './Courses';
-import Modules from './Courses/Modules';
-import Assignments from './Courses/Assignments';
-import AssignmentEditor from './Courses/Assignments/Editor';
-import Grades from './Courses/Grades';
 import KanbasNavigation from '../Kanbas/Navigation';
-import * as db from './Database';
+import db from './Database';
 
-export default function Kanbas() {
+const Kanbas: React.FC = () => {
   const [courses, setCourses] = useState<any[]>(db.courses);
   const [course, setCourse] = useState<any>({
     _id: '1234',
@@ -65,4 +62,6 @@ export default function Kanbas() {
       </div>
     </div>
   );
-}
+};
+
+export default Kanbas;

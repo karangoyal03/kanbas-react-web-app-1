@@ -1,34 +1,33 @@
-import { Link } from "react-router-dom";
-import db from "../Database";
-import React, { useState } from "react";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-export default function Dashboard() {
-  const [courses, setCourses] = useState(db.courses);
-  const [course, setCourse] = useState<any>({
-    _id: "0",
-    name: "New Course",
-    number: "New Number",
-    startDate: "2023-09-10",
-    endDate: "2023-12-15",
-    image: "/images/reactjs.jpg",
-    description: "New Description"
-  });
+interface Course {
+  _id: string;
+  name: string;
+  number: string;
+  startDate: string;
+  endDate: string;
+  image: string;
+  description: string;
+}
 
-  const addNewCourse = () => {
-    const newCourse = { ...course, _id: new Date().getTime().toString() };
-    setCourses([...courses, newCourse]);
-  };
+interface DashboardProps {
+  courses: Course[];
+  course: Course;
+  setCourse: React.Dispatch<React.SetStateAction<Course>>;
+  addNewCourse: () => void;
+  deleteCourse: (courseId: string) => void;
+  updateCourse: () => void;
+}
 
-  const deleteCourse = (courseId: string) => {
-    setCourses(courses.filter((course) => course._id !== courseId));
-  };
-
-  const updateCourse = () => {
-    setCourses(
-      courses.map((c) => (c._id === course._id ? course : c))
-    );
-  };
-
+const Dashboard: React.FC<DashboardProps> = ({
+  courses,
+  course,
+  setCourse,
+  addNewCourse,
+  deleteCourse,
+  updateCourse,
+}) => {
   return (
     <div id="wd-dashboard">
       <h1 id="wd-dashboard-title">Dashboard</h1>
@@ -62,14 +61,13 @@ export default function Dashboard() {
         onChange={(e) => setCourse({ ...course, description: e.target.value })}
       />
       <hr />
-
       <hr />
       <h2 id="wd-dashboard-published">Published Courses ({courses.length})</h2>
       <hr />
       <div id="wd-dashboard-courses" className="row">
         <div className="row row-cols-1 row-cols-md-5 g-4">
           {courses.map((course) => (
-            <div key={course._id} className="wd-dashboard-course col" style={{ width: "300px" }}>
+            <div key={course._id} className="wd-dashboard-course col" style={{ width: '300px' }}>
               <div className="card rounded-3 overflow-hidden">
                 <Link to={`/Kanbas/Courses/${course._id}/Home`} className="text-decoration-none">
                   <img
@@ -78,16 +76,18 @@ export default function Dashboard() {
                     style={{ width: '100%', height: '160px', objectFit: 'cover' }}
                   />
                   <div className="card-body">
-                    <span className="wd-dashboard-course-link" style={{ color: "navy", fontWeight: "bold" }}>
+                    <span className="wd-dashboard-course-link" style={{ color: 'navy', fontWeight: 'bold' }}>
                       {course.name}
                     </span>
-                    <p className="wd-dashboard-course-title card-text" style={{ maxHeight: "53px", overflow: "hidden" }}>
+                    <p className="wd-dashboard-course-title card-text" style={{ maxHeight: '53px', overflow: 'hidden' }}>
                       {course.description}
                     </p>
                   </div>
                 </Link>
                 <div className="card-footer">
-                  <Link to={`/Kanbas/Courses/${course._id}/Home`} className="btn btn-primary">Go</Link>
+                  <Link to={`/Kanbas/Courses/${course._id}/Home`} className="btn btn-primary">
+                    Go
+                  </Link>
                   <button
                     onClick={(event) => {
                       event.preventDefault();
@@ -116,4 +116,6 @@ export default function Dashboard() {
       </div>
     </div>
   );
-}
+};
+
+export default Dashboard;
